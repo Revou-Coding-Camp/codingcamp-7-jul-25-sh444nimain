@@ -1,0 +1,9 @@
+.body-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f172a;
+  color: white;
+  font-family: sans-serif;
+}

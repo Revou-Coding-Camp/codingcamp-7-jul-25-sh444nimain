@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="body-container">
+    <div class="bg-[#1e293b] p-6 rounded-lg shadow-md w-[600px]">
+      <h1 class="text-2xl font-bold text-center mb-4">Todo List</h1>
+
+      <form action="">
+        <div class="flex gap-2 mb-4">
+            <input
+              type="text"
+              class="flex-1 p-2 rounded bg-[#0f172a] text-white border border-gray-600 placeholder-gray-400"
+              placeholder="Add a new task"
+              id="task-input"
+            />
+            <input
+              type="date"
+              class="p-2 rounded bg-[#0f172a] text-white border border-gray-600"
+              id="due-date-input"
+            />
+
+          <button
+            type="button"
+            class="bg-indigo-500 hover:bg-indigo-600 px-4 rounded text-white"
+            onclick="addTask()"
+          >
+            +
+          </button>
+        </div>
+      </form>
+
+      <div class="flex justify-between mb-4">
+        <div class="flex-gap-2">
+          <button onclick="setFilter('completed')" class="bg-gray-600 hover:bg-gray-700 px-3 py-1 rounded"">Show Completed</button>
+          <button onclick="setFilter('all')" class="bg-gray-600 hover:bg-gray-700 px-3 py-1 rounded"">Show All</button>
+        </div>
+        <button
+          class="bg-indigo-500 hover:bg-indigo-600 px-3 py-1 rounded"
+          onclick="deleteAllTasks();"
+        >
+          Delete All
+        </button>
+      </div>
+
+      <div>
+        <table class="w-full text-sm">
+          <thead class="bg-[#0f172a] text-left uppercase text-gray-400">
+            <tr>
+              <th class="p-2">Task</th>
+              <th class="p-2">Due Date</th>
+              <th class="p-2">Status</th>
+              <th class="p-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="task-list" class="bg-[#1e293b]">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="text-sm text-gray-500 absolute bottom-4">
+      <span><span>© 2025 Sh444ni. All rights reserved.</span></span>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
